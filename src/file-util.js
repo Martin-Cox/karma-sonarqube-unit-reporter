@@ -60,7 +60,7 @@ function findFilesInDir (startPath, filter) {
       if (filename !== 'node_modules') {
         results = results.concat(findFilesInDir(filename, filter))
       }
-    } else if (filename.endsWith(filter)) {
+    } else if (filename.match(filter)) {
       results.push(filename)
     }
   }
